@@ -1,0 +1,56 @@
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align the input at the bottom */
+  height: 100vh; /* Full height */
+  padding: 20px;
+}
+
+.response-card {
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+  margin-bottom: 20px; /* Space between response and input */
+}
+
+.input-card {
+  background: #fff; /* Background color for the input card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.prompt {
+  border-radius: 10px; /* Rounded corners for TextArea */
+}
+
+.error-message {
+  color: red; /* Error message color */
+}
+
+
+.code-block {
+  background-color: #282c34; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 10px; /* Padding around the code */
+  border-radius: 8px; /* Rounded corners */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  white-space: pre; /* Preserve whitespace */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for code */
+  border: 1px solid #444; /* Optional: border to separate from the background */
+}
+
+/* Optional: add syntax highlighting for common languages */
+.code-block code {
+  color: #66d9ef; /* Color for keywords and strings */
+}
+
+.code-block {
+  background-color: #282c34; /* Dark background for code block */
+  color: #61dafb; /* Light blue color for text */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto; /* Horizontal scroll if the code is too long */
+  white-space: pre-wrap; /* Preserve formatting */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+  line-height: 1.5; /* Better line spacing */
+}
