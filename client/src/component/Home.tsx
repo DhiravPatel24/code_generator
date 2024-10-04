@@ -14,6 +14,7 @@ interface Message {
 }
 
 export default function Home() {
+  const baseUrl = import.meta.env.VITE_BASE_URL;
 //   const [collapsed, setCollapsed] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { text: "Hello! How can I assist you today?", sender: 'bot' },
@@ -24,7 +25,7 @@ export default function Home() {
   const fetchBotResponse = async (userMessage: string) => {
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:4242/generate-code', { prompt: userMessage });
+      const response = await axios.post(`${baseUrl}/generate-code`, { prompt: userMessage });
       const botReply = response.data.code;
 
       const isCode = botReply.includes('def ') || botReply.includes('```') || botReply.includes('const');
